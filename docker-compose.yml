@@ -3,6 +3,21 @@
 version: '3'
 
 services:
+  auth:
+    image: microservice_auth
+    ports:
+      - "8000:8000"
+
+  market:
+    image: microservice_market
+    ports:
+      - "8001:8001"
+
+  membership:
+    image: microservice_membership
+    ports:
+      - "8002:8002"
+
   postgres:
     image: postgres
     environment:
